@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Bulletin Board</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Community Bulletin Board</h1>
+    </header>
+    <nav>
+        <a href="#announcements">Announcements</a>
+        <a href="#events">Events Calendar</a>
+        <a href="#lost-found">Lost & Found</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="container">
+        <section id="announcements">
+            <h2>Announcements</h2>
+            <form id="announcementForm" class="announcement-form">
+                <input type="text" id="announcementTitle" placeholder="Title" required>
+                <textarea id="announcementDescription" placeholder="Description" rows="4" required></textarea>
+                <button type="submit">Add Announcement</button>
+            </form>
+            <div id="announcementList" class="announcements"></div>
+        </section>
+
+        <section id="events">
+            <h2>Events Calendar</h2>
+            <div class="calendar">
+                <select id="monthSelect">
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                </select>
+                <div class="days"></div>
+            </div>
+        </section>
+
+        <section id="lost-found">
+            <h2>Lost & Found</h2>
+            <form id="lostFoundForm" class="lost-found-form">
+                <input type="text" id="lostFoundItem" placeholder="Item Name" required>
+                <textarea id="lostFoundDetails" placeholder="Details" rows="4" required></textarea>
+                <input type="file" id="lostFoundImage" accept="image/*">
+                <button type="submit">Add Lost/Found Item</button>
+            </form>
+            <div id="lostFoundList" class="lost-found-items"></div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm" class="contact-form">
+                <input type="text" id="contactName" placeholder="Your Name" required>
+                <input type="email" id="contactEmail" placeholder="Your Email" required>
+                <textarea id="contactMessage" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
